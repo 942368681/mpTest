@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # mp-test
 
 > demo
@@ -36,7 +35,3 @@ npm run build --report
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-=======
-# mpTest
-mpvue小程序demo
->>>>>>> 982b5057d9287cc98e356954e3d295547f561b3c
