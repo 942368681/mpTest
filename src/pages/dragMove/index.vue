@@ -9,7 +9,7 @@
             class="movable" 
             :style="{ position: 'absolute', width: '100px', height: '100px', background: 'red', left: left + 'px', top: top + 'px' }"
         ></div> -->
-        <!-- <board></board> -->
+        <board />
     </div>
 </template>
 
