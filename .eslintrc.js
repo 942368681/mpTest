@@ -40,6 +40,6 @@ module.exports = {
     requirePlugin: true,
     mpvue: true,
     mpvuePlatform: true,
-    env: true
+    environment: true
   }
 }

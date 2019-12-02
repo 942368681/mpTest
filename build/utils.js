@@ -6,10 +6,12 @@ var mpvueInfo = require('../node_modules/mpvue/package.json')
 var packageInfo = require('../package.json')
 var mkdirp = require('mkdirp')
 
+const environment = process.env.ENVIRONMENT === 'development' ? 'dev' : 'test'
+
 exports.assetsPath = function (_path) {
   var assetsSubDirectory = process.env.NODE_ENV === 'production'
     ? config.build.assetsSubDirectory
-    : config.dev.assetsSubDirectory
+    : config[environment].assetsSubDirectory
   return path.posix.join(assetsSubDirectory, _path)
 }
 

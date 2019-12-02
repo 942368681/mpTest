@@ -4,11 +4,13 @@ var config = require('../config')
 // for mp
 var isProduction = true
 
+const environment = process.env.ENVIRONMENT === 'development' ? 'dev' : 'test'
+
 module.exports = {
   loaders: utils.cssLoaders({
     sourceMap: isProduction
       ? config.build.productionSourceMap
-      : config.dev.cssSourceMap,
+      : config[environment].cssSourceMap,
     extract: isProduction
   }),
   transformToRequire: {

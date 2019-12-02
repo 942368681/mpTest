@@ -10,6 +10,8 @@ var glob = require('glob')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
 var relative = require('relative')
 
+const environment = process.env.ENVIRONMENT === 'development' ? 'dev' : 'test'
+
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
@@ -40,7 +42,7 @@ let baseWebpackConfig = {
     filename: '[name].js',
     publicPath: process.env.NODE_ENV === 'production'
       ? config.build.assetsPublicPath
-      : config.dev.assetsPublicPath
+      : config[environment].assetsPublicPath
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
@@ -110,7 +112,7 @@ let baseWebpackConfig = {
     new webpack.DefinePlugin({
       'mpvue': 'global.mpvue',
       'mpvuePlatform': 'global.mpvuePlatform',
-      'env': JSON.stringify(process.env.NODE_ENV)
+      'environment': JSON.stringify(process.env.NODE_ENV)
     }),
     new MpvuePlugin(),
     new CopyWebpackPlugin([{
