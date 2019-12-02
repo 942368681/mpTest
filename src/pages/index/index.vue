@@ -22,6 +22,7 @@
     </form>
 
     <a href="/pages/counter/main" class="counter">去往Vuex示例页面</a>
+    <navigator url="/pages/dragMove/main" hover-class="navigator-hover">dragMove</navigator>
 
     <div class="all">
         <div class="left">
