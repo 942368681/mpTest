@@ -36,7 +36,7 @@ export default {
     .box {
         margin: 0 auto;
         width: 80%;
-        height: 1000rpx;
+        height: 1000px;
         background: #ededed;
         position: relative;
     }

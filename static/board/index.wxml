@@ -1,5 +1,3 @@
-<!--components/dynamic/dynamic.wxml-->
-<view class='board'>
-    1111
+<view class='board-container' id='board-box'>
+    <canvas type="2d" canvas-id="board-index-1" id="board-index-1" bindtouchstart='touchstart' bindtouchmove='touchMove' bindtouchend='touchEnd' disable-scroll='true'></canvas>
 </view>
-
