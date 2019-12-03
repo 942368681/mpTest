@@ -79,17 +79,19 @@ Component({
             }
         },
         getMidInputCoords: function (coords) {
-            const { coords: dataCoords } = this.data;
+            const {
+                coords: dataCoords
+            } = this.data;
             return {
-                x: dataCoords.old.x + coords.x>>1,
-                y: dataCoords.old.y + coords.y>>1
+                x: dataCoords.old.x + coords.x >> 1,
+                y: dataCoords.old.y + coords.y >> 1
             };
         },
         touchstart: function (e) {
             let color, lineWidth;
             let {
                 context,
-                points,
+                settings,
                 settings: {
                     brushState
                 },
@@ -119,33 +121,14 @@ Component({
             context.strokeStyle = color; //设置描边颜色
             context.lineWidth = lineWidth; //设置线条宽度
 
-            // points.push({
-            //     point: [],
-            //     color: color,
-            //     lineWidth: lineWidth
-            // });
-
             this.data.curve = {
-                point: [],
-                color: color,
-                lineWidth: lineWidth
+                settings,
+                point: []
             };
 
             this.data.isDrawing = true;
         },
         touchMove: function (e) {
-            /* let {
-                points
-            } = this.data;
-            let pos = e.touches[0];
-            let point = points[points.length - 1].point;
-            point.push({
-                x: pos.x,
-                y: pos.y
-            });
-            // this.drawing(point);
-            this.drawing(pos.x, pos.y); */
-
             const coords = this.getCoords(e);
             this.data.coords.current = coords;
         },
@@ -169,17 +152,12 @@ Component({
 
                 const currentMid = this.getMidInputCoords(coords.current);
 
-                // context.moveTo(point[0].x, point[0].y);
-                // for (let i = 1, len = point.length; i < len; i++) {
-                //     context.lineTo(point[i].x, point[i].y);
-                // }
                 context.moveTo(currentMid.x, currentMid.y);
                 context.quadraticCurveTo(coords.old.x, coords.old.y, coords.oldMid.x, coords.oldMid.y);
                 context.stroke();
 
                 const currentCoords = this.cloneCurrentCoords(coords);
-                // context.draw(true);
-                
+
                 this.data.curve.point.push({
                     currentMidX: currentMid.x,
                     currentMidY: currentMid.y,
