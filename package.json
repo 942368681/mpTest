@@ -30,7 +30,8 @@
   },
   "dependencies": {
     "mpvue": "^2.0.0",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "white-board-mini": "^1.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.22.1",
@@ -95,5 +96,16 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/942368681/mpTest.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/942368681/mpTest/issues"
+  },
+  "homepage": "https://github.com/942368681/mpTest#readme"
 }
