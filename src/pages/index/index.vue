@@ -1,13 +1,17 @@
 <template>
     <div class="container">
-        <board />
+        <board :init-data="boardData"/>
     </div>
 </template>
 
 <script>
+const boardData = require('../../mock/boardData');
+console.log(boardData)
 export default {
     data() {
-        return {};
+        return {
+            boardData: {}
+        };
     },
 
     components: {},
@@ -16,6 +20,7 @@ export default {
 
     created() {
         // let app = getApp()
+        this.boardData = boardData;
     }
 };
 </script>
