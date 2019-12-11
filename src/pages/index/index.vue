@@ -112,7 +112,7 @@ export default {
             rubberRange,
             strokeStyle: colorList[currColorIndex]
         };
-        boardData.settings = settings;
+        boardData.canvasSettings = settings;
 
         this.boardData = boardData;
     },

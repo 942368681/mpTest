@@ -1,6 +1,6 @@
 /* eslint-disable */
 module.exports = {
-    "settings": {
+    "canvasSettings": {
         "inputType": "pencil", // rubber, pencil
         "strokeStyle": "#ff0000",
         "lineWidth": 2,
