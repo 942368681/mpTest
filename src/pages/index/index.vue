@@ -10,6 +10,7 @@
                     :class="inputType === 'rubber' ? 'iconfont iconcachu active' : 'iconfont iconcachu'"
                     data-type="rubber"
                 ></icon>
+                <switch :checked="switchChecked" @change="switchChange"/>
             </div>
             <scroll-view scroll-x="true" scroll-left="0" class="color-list">
                 <div
@@ -92,7 +93,9 @@ export default {
             // 当前粗细
             lineWidth: 6,
             // 橡皮范围
-            rubberRange: 20
+            rubberRange: 20,
+            // 多媒体可操控开关
+            switchChecked: false
         };
     },
 
@@ -117,6 +120,14 @@ export default {
         this.boardData = boardData;
     },
     methods: {
+        switchChange: function (ev) {
+            const compInstance = this.$mp.page.selectComponent('.board-comp');
+            if (ev.mp.detail.value) {
+                compInstance.changeHandleComps(true);
+            } else {
+                compInstance.changeHandleComps(false);
+            }
+        },
         changeInpsType: function(ev) {
             const inputType = ev.target.dataset.type;
             const { inputType: prevInpsType } = this;
