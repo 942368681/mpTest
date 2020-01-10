@@ -1,0 +1,5 @@
+{
+    "usingComponents": {
+        "board": "/miniprogram_npm/white-board-mini/index"
+    }
+}
