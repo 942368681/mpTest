@@ -31,7 +31,7 @@
   "dependencies": {
     "mpvue": "^2.0.0",
     "vuex": "^3.0.1",
-    "white-board-mini": "^1.1.2"
+    "white-board-mini": "^1.1.6"
   },
   "devDependencies": {
     "babel-core": "^6.22.1",

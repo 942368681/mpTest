@@ -3,8 +3,8 @@
         <div class="tool-bar">
             <div class="input-type" @click="changeInpsType">
                 <icon
-                    :class="inputType === 'pencil' ? 'iconfont iconpan_icon active' : 'iconfont iconpan_icon'"
-                    data-type="pencil"
+                    :class="inputType === 'fountain-pen' ? 'iconfont iconpan_icon active' : 'iconfont iconpan_icon'"
+                    data-type="fountain-pen"
                 ></icon>
                 <icon
                     :class="inputType === 'rubber' ? 'iconfont iconcachu active' : 'iconfont iconcachu'"
@@ -48,8 +48,8 @@ export default {
     data() {
         return {
             boardData: {},
-            // 输入类型 pencil： 笔， rubber： 橡皮
-            inputType: 'pencil',
+            // 输入类型 fountain-pen： 钢笔， rubber： 橡皮
+            inputType: 'fountain-pen',
             // 颜色列表
             colorList: [
                 '#000000',

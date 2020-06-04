@@ -35,8 +35,8 @@ Component({
             }
         },
         settings: {
-            // 输入类型 'pencil'-画笔；'rubber'-橡皮檫
-            brushState: 'pencil',
+            // 输入类型 'fountain-pen'-钢笔；'rubber'-橡皮檫
+            brushState: 'fountain-pen',
             //当前画笔颜色
             tinctCurr: '#039be5',
             //画笔尺寸
@@ -103,7 +103,7 @@ Component({
                 }
             } = this.data;
 
-            if (brushState === 'pencil') {
+            if (brushState === 'fountain-pen') {
                 color = tinctCurr;
                 lineWidth = tinctSize;
             } else {
