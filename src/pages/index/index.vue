@@ -10,7 +10,8 @@
                     :class="inputType === 'rubber' ? 'iconfont iconcachu active' : 'iconfont iconcachu'"
                     data-type="rubber"
                 ></icon>
-                <switch :checked="switchChecked" @change="switchChange"/>
+                <!-- <switch :checked="switchChecked" @change="switchChange"/> -->
+                <button type="primary" class="save-btn" @click="getData">保存</button>
             </div>
             <scroll-view scroll-x="true" scroll-left="0" class="color-list">
                 <div
@@ -112,12 +113,15 @@ export default {
         const settings = {
             inputType,
             lineWidth,
-            rubberRange,
             strokeStyle: colorList[currColorIndex]
         };
-        boardData.canvasSettings = settings;
+        const initData = {
+            canvasSettings: settings,
+            zIndexInfo: boardData,
+            rubberRange
+        };
 
-        this.boardData = boardData;
+        this.boardData = initData;
     },
     methods: {
         switchChange: function (ev) {
@@ -166,6 +170,12 @@ export default {
             instance.setSettings({
                 ...settings
             });
+        },
+        // 获取白板数据
+        getData: function () {
+            const compInstance = this.$mp.page.selectComponent('.board-comp');
+            const data = compInstance.getBoardData();
+            console.log(data);
         }
     }
 };
@@ -196,6 +206,17 @@ export default {
 }
 .input-type icon.active {
     background: #ededed;
+}
+.input-type .save-btn {
+    display: flex;
+    height: 60rpx;
+    align-items: center;
+    justify-content: center;
+    width: 100rpx;
+    font-size: 28rpx;
+    border-radius: 10rpx;
+    margin: 0;
+    padding: 0;
 }
 
 .color-list {
