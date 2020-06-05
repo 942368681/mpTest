@@ -11,7 +11,8 @@
                     data-type="rubber"
                 ></icon>
                 <!-- <switch :checked="switchChecked" @change="switchChange"/> -->
-                <button type="primary" class="save-btn" @click="getData">保存</button>
+                <button type="primary" class="save-btn" @click="getData">save</button>
+                <button type="primary" class="reload-btn" @click="reload">reload</button>
             </div>
             <scroll-view scroll-x="true" scroll-left="0" class="color-list">
                 <div
@@ -44,6 +45,8 @@
 
 <script>
 const boardData = require('../../mock/boardData');
+const boardData2 = require('../../mock/boardData2');
+
 export default {
     data() {
         return {
@@ -176,6 +179,29 @@ export default {
             const compInstance = this.$mp.page.selectComponent('.board-comp');
             const data = compInstance.getBoardData();
             console.log(data);
+        },
+        // 重置数据
+        reload: function () {
+            const {
+                inputType,
+                colorList,
+                currColorIndex,
+                lineWidth,
+                rubberRange
+            } = this;
+
+            const settings = {
+                inputType,
+                lineWidth,
+                strokeStyle: colorList[currColorIndex]
+            };
+            const initData = {
+                canvasSettings: settings,
+                zIndexInfo: boardData2,
+                rubberRange
+            };
+
+            this.boardData = initData;
         }
     }
 };
@@ -207,7 +233,7 @@ export default {
 .input-type icon.active {
     background: #ededed;
 }
-.input-type .save-btn {
+.input-type .save-btn, .input-type .reload-btn {
     display: flex;
     height: 60rpx;
     align-items: center;
@@ -215,7 +241,7 @@ export default {
     width: 100rpx;
     font-size: 28rpx;
     border-radius: 10rpx;
-    margin: 0;
+    margin: 0 20rpx 0 0;
     padding: 0;
 }
 
