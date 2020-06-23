@@ -27,7 +27,7 @@
 	"projectname": "mpTest",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
-	"libVersion": "2.11.1",
+	"libVersion": "2.11.2",
 	"condition": {
 		"search": {
 			"current": -1,
