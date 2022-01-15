@@ -6210,10 +6210,10 @@ shebang-regex@^1.0.0:
   resolved "https://registry.npm.taobao.org/shebang-regex/download/shebang-regex-1.0.0.tgz#da42f49740c0b42db2ca9728571cb190c98efea3"
   integrity sha1-2kL0l0DAtC2yypcoVxyxkMmO/qM=
 
-shelljs@^0.8.1:
-  version "0.8.4"
-  resolved "https://registry.npm.taobao.org/shelljs/download/shelljs-0.8.4.tgz?cache=0&sync_timestamp=1587787210621&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fshelljs%2Fdownload%2Fshelljs-0.8.4.tgz#de7684feeb767f8716b326078a8a00875890e3c2"
-  integrity sha1-3naE/ut2f4cWsyYHiooAh1iQ48I=
+shelljs@^0.8.5:
+  version "0.8.5"
+  resolved "https://registry.yarnpkg.com/shelljs/-/shelljs-0.8.5.tgz#de055408d8361bed66c669d2f000538ced8ee20c"
+  integrity sha512-TiwcRcrkhHvbrZbnRcFYMLl30Dfov3HKqzp5tO5b4pt6G/SezKcYhmDg15zXVBswHmctSAQKznqNW2LO5tTDow==
   dependencies:
     glob "^7.0.0"
     interpret "^1.0.0"
@@ -7193,10 +7193,10 @@ which@^1.2.9:
   dependencies:
     isexe "^2.0.0"
 
-white-board-mini@^1.0.0:
-  version "1.1.1"
-  resolved "https://registry.npm.taobao.org/white-board-mini/download/white-board-mini-1.1.1.tgz#01b3c6f2de75e53cc4e4874efb58b8b052a9fe63"
-  integrity sha1-AbPG8t515TzE5IdO+1i4sFKp/mM=
+white-board-mini@^1.1.8:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/white-board-mini/-/white-board-mini-1.4.2.tgz#78e3a6a998200639890587412d680a234b4fd311"
+  integrity sha512-+ZnLc0l8/0dXzZZ1StkxPSM4fMOJuU6F3Eq8HvBeMzWKMP6Z98kBxBfKY2ml4/0G7KQSd5prH/wsrE4tk2j25g==
 
 window-size@0.1.0:
   version "0.1.0"
